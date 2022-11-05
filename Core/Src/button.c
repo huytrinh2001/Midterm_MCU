@@ -57,12 +57,13 @@ int isDecrease1Pressed(){
 
 void subKeyProcess(){
 	reset1_flag = 1;
+	inc1_flag = 1;
+	dec1_flag = 1;
 }
 
 
 //RESET
 void getKeyInput_1(){
-
   KeyReg0 = KeyReg1;
   KeyReg1 = KeyReg2;
   KeyReg2 = HAL_GPIO_ReadPin(RESET_GPIO_Port, RESET_Pin);

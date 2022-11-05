@@ -21,6 +21,7 @@
 #include "main.h"
 #include "software_timer.h"
 #include "button.h"
+#include "fsm_simple_button.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -95,6 +96,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
 	  if (isReset1Pressed() == 1 ){
@@ -106,6 +108,8 @@ int main(void)
 	  if (isDecrease1Pressed() == 1 ){
 	  		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 	  }
+	  fsm_simple_buttons_run();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

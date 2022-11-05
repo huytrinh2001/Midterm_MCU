@@ -1,0 +1,2 @@
+fsm_simple_button.c:14:6:fsm_simple_buttons_run	8	static
+fsm_simple_button.c:43:6:display7Segments	16	static
